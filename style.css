@@ -1,0 +1,40 @@
+@font-face{
+    font-family: myfont;
+    src:url(productsans.ttf);
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    height: 449px;
+    width: 449px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container{
+    font-family: 'myfont';
+    color: #fff;
+    position: absolute;
+    top: 36%;
+    left: 28%;
+    transform: translate(-100%, -50%);
+    font-size: 370px;
+}
+
+.container1{
+    font-family: 'myfont';
+    color: #fff;
+    position: absolute;
+    top: 64%;
+    left: 28%;
+    transform: translate(-100%, -50%);
+    font-size: 370px;
+}
