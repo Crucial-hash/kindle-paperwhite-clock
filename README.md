@@ -3,7 +3,7 @@
   <img width="150" src="kindle.png" alt="Kindle Paperwhite Logo"></a>
 <h1 align="center">Kindle Paperwhite Clock</h1>
 
-## 🕔 Kindle Paperwhite Clock is a small website optimised for kindle Paperwhite 2's for displaying the time, next Formula 1 Grand Prix, and next Islamic Prayer time.
+<h1 align="center">Kindle Paperwhite Clock🕔 Kindle Paperwhite Clock is a small website optimised for kindle Paperwhite 2's for displaying the time, next Formula 1 Grand Prix, and next Islamic Prayer time.</h1>
 
 - The main part of this project is the [Clock Design](/images/pixel-lockscreen-clock.png) which is inspired by Google's [Material You](https://material.io/blog/announcing-material-you) Design. The lockscreen is where this clock's design is from, being called the "double line" clock.
 
