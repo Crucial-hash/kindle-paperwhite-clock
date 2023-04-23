@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-next-line -->
 <p align="center">
-  <img width="150" src="kindle.png" alt="Kindle Paperwhite Logo"></a>
+  <img width="250" src="/images/logo.png" alt="Kindle Paperwhite Logo"></a>
 <h1 align="center">Kindle Paperwhite Clock</h1>
 
 <h1 align="center">🕔 Kindle Paperwhite Clock is a small website optimised for Kindle Paperwhite 2's for displaying the time,the next Formula 1 Grand Prix, and the next Islamic Prayer time.</h1>
