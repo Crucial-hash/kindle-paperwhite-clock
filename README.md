@@ -18,7 +18,7 @@
 
 - Kindle Paperwhite 2 (PW2) (You may be able to use other kindles but the website WILL NOT be optimised).
 - [Jailbroken Kindle](https://www.mobileread.com/forums/showthread.php?t=346037) with [Alpine Linux](https://github.com/thomaspreece/alpine_kindle/) installed. (This is a modified version with midori browser instead o chromium which works better on the PW2 but for other Kindle's it should work.).
-- Always on Computer (Server) There may be ways to work around this but this is what I did to access the website. (Make sure to download [Python](https://www.python.org/) if you need to use the prayer function and [Node.js](https://nodejs.org/en) with the http-server library to host the server.
+- Always on Computer (Server) There may be ways to work around this but this is what I did to access the website. (Make sure to download [Python](https://www.python.org/) and download the libraries BeautifulSoup and requests if you need to use the prayer function and [Node.js](https://nodejs.org/en) with the http-server library to host the server.
 
 
 
