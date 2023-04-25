@@ -14,13 +14,11 @@ soup = BeautifulSoup(content, 'lxml')
 prayerTime = soup.find('ul', class_='tm-horizontal-listitem clearfix highlighted').get_text()
 
 
-print(prayerTime)
-
-
 lines = prayerTime.split('\n')[1:-1]
 
 
 lines = prayerTime.split('\n')[1:-1]
+
 
 lines = prayerTime.split('\n')[1:-1]
 
@@ -50,6 +48,7 @@ zuhrHour, zuhrMin = map(int, lines[1].split(':'))
 asrHour, asrMin = map(int, lines[2].split(':'))
 maghribHour, maghribMin = map(int, lines[3].split(':'))
 ishaHour, ishaMin = map(int, lines[4].split(':'))
+
 
 current_time = datetime.now().time()
 
@@ -87,9 +86,6 @@ else:
     next_prayer_min = fajrMin
 
 
-print(next_prayer, next_prayer_hour, next_prayer_min)
-
-
 with open('name.txt', 'w') as file:
     file.write(f'{next_prayer}\n')
     
@@ -98,55 +94,10 @@ with open('hours.txt', 'w') as file:
     
 with open('minutes.txt', 'w') as file:
     file.write(f'{next_prayer_min}\n')
-               
-
+    
+    
 print(f"Fajr: {fajrHour}:{fajrMin}")
 print(f"Zuhr: {zuhrHour}:{zuhrMin}")
 print(f"Asr: {asrHour}:{asrMin}")
 print(f"Maghrib: {maghribHour}:{maghribMin}")
 print(f"Isha: {ishaHour}:{ishaMin}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# prayerTime = soup.find('span', class_='text-light prayer-margin-left').get_text()
-
-# prayerTimeFormatted = prayerTime.replace("	", "").replace("\n", "")
-# prayerTimeFormatted = prayerTimeFormatted[:-3]
-# hours, minutes = prayerTimeFormatted.split(':')
-
-
-
-
-# filePrayerName = open("name.txt", "w")
-# filePrayerName.write(prayerName)
-
-# filePrayerTime = open("hours.txt", "w")
-# filePrayerTime.write(hours)
-
-# filePrayerTime = open("minutes.txt", "w")
-# filePrayerTime.write(minutes)
