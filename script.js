@@ -126,7 +126,7 @@ window.setInterval(function(){
 
     //AUSTRALIA TO AZERBAIJAN
 
-    if (tracktime >= '04020730') { setProperties("/clock/image/azerbaijan.png","38.5%","-20%","680%","161%","/clock/image/azerbaijanflag.png","64%","173%","28 - 30 April","P1 Q P2 S R","Azerbaijan") }
+    if (tracktime >= '04020730') { setProperties("/clock/image/azerbaijan.png","38.5%","-20%","680%","161%","/clock/image/azerbaijanflag.png","64%","173%","28 - 30 April","P1 Q SS S R","Azerbaijan") }
 
     //AZERBAIJAN TO MIAMI
 
@@ -150,7 +150,7 @@ window.setInterval(function(){
 
     //CANADA TO AUSTRIA
 
-    if (tracktime >= '06182030') { setProperties("/clock/image/austria.png","43%","-20%","670%","160%","/clock/image/austriaflag.png","61.4%","165%","31 - 02 June/July","P1 Q P2 S R","Austria") }
+    if (tracktime >= '06182030') { setProperties("/clock/image/austria.png","43%","-20%","670%","160%","/clock/image/austriaflag.png","61.4%","165%","31 - 02 June/July","P1 Q SS S R","Austria") }
 
     //AUSTRIA TO BRITAIN
 
@@ -162,7 +162,7 @@ window.setInterval(function(){
 
     //HUNGARY TO BELGIUM
 
-    if (tracktime >= '07231530') { setProperties("/clock/image/belgium.png","37.5%","-24%","630%","140%","/clock/image/belgiumflag.png","62.5%","145%","28 - 30 July","P1 Q P2 S R","Belgium") }
+    if (tracktime >= '07231530') { setProperties("/clock/image/belgium.png","37.5%","-24%","630%","140%","/clock/image/belgiumflag.png","62.5%","145%","28 - 30 July","P1 Q SS S R","Belgium") }
 
     //BELGIUM TO NETHERLANDS
 
@@ -182,11 +182,11 @@ window.setInterval(function(){
 
     //JAPAN TO QATAR
 
-    if (tracktime >= '09240730') { setProperties("/clock/image/qatar.png","41%","-24%","645%","140%","/clock/image/qatarflag.png","66%","145%","06 - 08 Oct","P1 Q P2 S R","Qatar") }
+    if (tracktime >= '09240730') { setProperties("/clock/image/qatar.png","41%","-24%","645%","140%","/clock/image/qatarflag.png","66%","145%","06 - 08 Oct","P1 Q SS S R","Qatar") }
 
     //QATAR TO UNITED STATES
 
-    if (tracktime >= '10081630') { setProperties("/clock/image/cota.png","37.5%","-16%","690%","205%","/clock/image/usaflag.png","63%","185%","20 - 22 Oct","P1 Q P2 S R","United States") }
+    if (tracktime >= '10081630') { setProperties("/clock/image/cota.png","37.5%","-16%","690%","205%","/clock/image/usaflag.png","63%","185%","20 - 22 Oct","P1 Q SS S R","United States") }
 
     //UNITED STATES TO MEXICO
 
@@ -194,7 +194,7 @@ window.setInterval(function(){
 
     //MEXICO TO BRAZIL
 
-    if (tracktime >= '10292130') { setProperties("/clock/image/brazil.png","40%","-24%","640%","140%","/clock/image/brazilflag.png","65%","145%","03 - 05 Nov","P1 Q P2 S R","Brazil") }
+    if (tracktime >= '10292130') { setProperties("/clock/image/brazil.png","40%","-24%","640%","140%","/clock/image/brazilflag.png","65%","145%","03 - 05 Nov","P1 Q SS S R","Brazil") }
 
     //BRAZIL TO LAS VEGAS
 

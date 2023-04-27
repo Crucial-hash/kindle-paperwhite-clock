@@ -82,6 +82,11 @@ diff_hour = int(diff_seconds // 3600)
 diff_minute = int((diff_seconds % 3600) // 60)
 
 
+if diff_hour < 0:
+    diff_hour += 24
+    diff_minute *= 1
+
+
 with open('name.txt', 'w') as file:
     file.write(f'{next_prayer}\n')
     
