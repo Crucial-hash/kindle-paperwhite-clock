@@ -114,6 +114,18 @@ button {
     position:absolute; top:0; right:0;
   }
 
+  .suntextdiv {
+    font-size: 32px;
+    color: transparent;
+    transform: translate(-1.5%, 2260%);
+    font-family: 'reg';
+    position:absolute; top:0; right:0;
+  }
+
+  .suntext {
+    position:absolute; top:0; right:0;
+  }
+
   .white {
     color: #ffffff;
   }

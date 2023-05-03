@@ -36,6 +36,7 @@ function displayTime(){
         min = "0" + min
     }
 
+
     document.getElementById('hours').innerHTML = hrs;
     document.getElementById('minutes').innerHTML = min;
 }
@@ -70,27 +71,110 @@ function setProperties(trackImage,trackNameAllignX,trackNameAllignY,flagAllignX,
   }
 
 
+  const button = document.getElementById("prayerbutton");
+  const prayer = document.getElementById("prayertext");
+  const sun = document.getElementById("suntext");
+  let state = 0;
+  
+  button.addEventListener("click", function() {
+    if (state === 0) {
+      state = 1;
+      prayer.classList.add("white");
+      sun.classList.remove("white");
+    } else if (state === 1) {
+      state = 2;
+      sun.classList.add("white");
+      prayer.classList.remove("white");
+    } else {
+      state = 0;
+      prayer.classList.remove("white");
+      sun.classList.remove("white");
+      document.body.style.backgroundColor = '#ffffff';
+      setTimeout(function() {
+        document.body.style.backgroundColor = '#000000';
+      }, 1000);
+    }
+  });
 
-const button = document.getElementById("prayerbutton");
-const text = document.getElementById("prayertext");
+
+  window.setInterval(function(){
 
 
-button.addEventListener("click", function() {
-  if (text.classList.contains("white")) {
-    text.classList.remove("white");
-    document.body.style.backgroundColor = '#ffffff';
-    setTimeout(function() {
-      document.body.style.backgroundColor = '#000000';
-    }, 1000);
-  } else {
-    text.classList.add("white");
-    document.body.style.backgroundColor = '#ffffff';
-    setTimeout(function() {
-      document.body.style.backgroundColor = '#000000';
-    }, 1000);
-  }
-});
+    if (state === 1) {
+      prayer.style.transform = "translate(3%, 2260%)";
+    } else {
+      prayer.style.transform = "none";
+    }
+  
+  
+    if (state === 2) {
+      sun.style.transform = "translate(1%, 2260%)";
+    } else {
+      sun.style.transform = "none";
+    }
 
+
+    var xhrName = new XMLHttpRequest();
+    xhrName.open("GET", "/clock/name.txt", false);
+    xhrName.send();
+    
+    if(xhrName.readyState === 4 && xhrName.status === 200) {
+      var prayerName = xhrName.responseText;
+    }
+    
+    var xhrHours = new XMLHttpRequest();
+    xhrHours.open("GET", "/clock/hours.txt", false);
+    xhrHours.send();
+    
+    if(xhrHours.readyState === 4 && xhrHours.status === 200) {
+      var prayerHours = parseInt(xhrHours.responseText);
+    }
+    
+    var xhrMinutes = new XMLHttpRequest();
+    xhrMinutes.open("GET", "/clock/minutes.txt", false);
+    xhrMinutes.send();
+    
+    if(xhrMinutes.readyState === 4 && xhrMinutes.status === 200) {
+      var prayerMinutes = parseInt(xhrMinutes.responseText);
+    }
+    
+
+    var xhrSunState = new XMLHttpRequest();
+    xhrSunState.open("GET", "/clock/sunstate.txt", false);
+    xhrSunState.send();
+    
+    if(xhrSunState.readyState === 4 && xhrSunState.status === 200) {
+      var sunState = xhrSunState.responseText;
+    }
+    
+    var xhrSunHours = new XMLHttpRequest();
+    xhrSunHours.open("GET", "/clock/sunhours.txt", false);
+    xhrSunHours.send();
+    
+    if(xhrSunHours.readyState === 4 && xhrSunHours.status === 200) {
+      var sunHours = parseInt(xhrSunHours.responseText);
+    }
+    
+    var xhrSunMinutes = new XMLHttpRequest();
+    xhrSunMinutes.open("GET", "/clock/sunminutes.txt", false);
+    xhrSunMinutes.send();
+    
+    if(xhrSunMinutes.readyState === 4 && xhrSunMinutes.status === 200) {
+      var sunMinutes = parseInt(xhrSunMinutes.responseText);
+    }
+    
+
+    document.getElementById('prayertext').innerHTML = prayerName + " In " + 
+        (prayerHours === 1 ? prayerHours + " Hour, " : prayerHours + " Hours, ") + 
+        (prayerMinutes === 1 ? prayerMinutes + " Minute" : prayerMinutes + " Minutes").replace("1 Minutes", "1 Minute");
+    
+    document.getElementById('suntext').innerHTML = sunState +  " In " + 
+        (sunHours === 1 ? sunHours + " Hour, " : sunHours + " Hours, ") +
+        (sunMinutes === 1 ? sunMinutes + " Minute" : sunMinutes + " Minutes").replace("1 Minutes", "1 Minute");
+    
+}, 1000);
+
+  
 
 window.setInterval(function(){
 
@@ -126,7 +210,7 @@ window.setInterval(function(){
 
     //AUSTRALIA TO AZERBAIJAN
 
-    if (tracktime >= '04020730') { setProperties("/clock/image/azerbaijan.png","38.5%","-20%","680%","161%","/clock/image/azerbaijanflag.png","64%","173%","28 - 30 April","P1 Q P2 S R","Azerbaijan") }
+    if (tracktime >= '04020730') { setProperties("/clock/image/azerbaijan.png","38.5%","-20%","680%","161%","/clock/image/azerbaijanflag.png","64%","173%","28 - 30 April","P1 Q SS S R","Azerbaijan") }
 
     //AZERBAIJAN TO MIAMI
 
@@ -150,7 +234,7 @@ window.setInterval(function(){
 
     //CANADA TO AUSTRIA
 
-    if (tracktime >= '06182030') { setProperties("/clock/image/austria.png","43%","-20%","670%","160%","/clock/image/austriaflag.png","61.4%","165%","31 - 02 June/July","P1 Q P2 S R","Austria") }
+    if (tracktime >= '06182030') { setProperties("/clock/image/austria.png","43%","-20%","670%","160%","/clock/image/austriaflag.png","61.4%","165%","31 - 02 June/July","P1 Q SS S R","Austria") }
 
     //AUSTRIA TO BRITAIN
 
@@ -162,7 +246,7 @@ window.setInterval(function(){
 
     //HUNGARY TO BELGIUM
 
-    if (tracktime >= '07231530') { setProperties("/clock/image/belgium.png","37.5%","-24%","630%","140%","/clock/image/belgiumflag.png","62.5%","145%","28 - 30 July","P1 Q P2 S R","Belgium") }
+    if (tracktime >= '07231530') { setProperties("/clock/image/belgium.png","37.5%","-24%","630%","140%","/clock/image/belgiumflag.png","62.5%","145%","28 - 30 July","P1 Q SS S R","Belgium") }
 
     //BELGIUM TO NETHERLANDS
 
@@ -182,11 +266,11 @@ window.setInterval(function(){
 
     //JAPAN TO QATAR
 
-    if (tracktime >= '09240730') { setProperties("/clock/image/qatar.png","41%","-24%","645%","140%","/clock/image/qatarflag.png","66%","145%","06 - 08 Oct","P1 Q P2 S R","Qatar") }
+    if (tracktime >= '09240730') { setProperties("/clock/image/qatar.png","41%","-24%","645%","140%","/clock/image/qatarflag.png","66%","145%","06 - 08 Oct","P1 Q SS S R","Qatar") }
 
     //QATAR TO UNITED STATES
 
-    if (tracktime >= '10081630') { setProperties("/clock/image/cota.png","37.5%","-16%","690%","205%","/clock/image/usaflag.png","63%","185%","20 - 22 Oct","P1 Q P2 S R","United States") }
+    if (tracktime >= '10081630') { setProperties("/clock/image/cota.png","37.5%","-16%","690%","205%","/clock/image/usaflag.png","63%","185%","20 - 22 Oct","P1 Q SS S R","United States") }
 
     //UNITED STATES TO MEXICO
 
@@ -194,7 +278,7 @@ window.setInterval(function(){
 
     //MEXICO TO BRAZIL
 
-    if (tracktime >= '10292130') { setProperties("/clock/image/brazil.png","40%","-24%","640%","140%","/clock/image/brazilflag.png","65%","145%","03 - 05 Nov","P1 Q P2 S R","Brazil") }
+    if (tracktime >= '10292130') { setProperties("/clock/image/brazil.png","40%","-24%","640%","140%","/clock/image/brazilflag.png","65%","145%","03 - 05 Nov","P1 Q SS S R","Brazil") }
 
     //BRAZIL TO LAS VEGAS
 
@@ -204,48 +288,14 @@ window.setInterval(function(){
 
     if (tracktime >= '11190730') { setProperties("/clock/image/abudhabi.png","37.5%","-24%","670%","140%","/clock/image/abudhabiflag.png","64%","145%","24 - 26 Nov","P1 P2 P3 Q R","Abu Dhabi") }
 
+
+    function boldString(str, find){
+      var re = new RegExp(find, 'g');
+      return str.replace(re, '<b>'+find+'</b>');
+    }
+    var oldText = document.getElementById("session").innerHTML;
+    var result = boldString(oldText, "R");
+    document.getElementById("session").innerHTML = result;
+
+
 }, 1000);
-
-
-function boldString(str, find){
-  var re = new RegExp(find, 'g');
-  return str.replace(re, '<b>'+find+'</b>');
-}
-var oldText = document.getElementById("session").innerHTML;
-var result = boldString(oldText, "R");
-document.getElementById("session").innerHTML = result;
-
-
-window.setInterval(function(){
-
-  
-var xhrName = new XMLHttpRequest();
-xhrName.open("GET", "/clock/name.txt", false);
-xhrName.send();
-
-if(xhrName.readyState === 4 && xhrName.status === 200) {
-  var prayerName = xhrName.responseText;
-}
-
-var xhrHours = new XMLHttpRequest();
-xhrHours.open("GET", "/clock/hours.txt", false);
-xhrHours.send();
-
-if(xhrHours.readyState === 4 && xhrHours.status === 200) {
-  var prayerHours = parseInt(xhrHours.responseText);
-}
-
-var xhrMinutes = new XMLHttpRequest();
-xhrMinutes.open("GET", "/clock/minutes.txt", false);
-xhrMinutes.send();
-
-if(xhrMinutes.readyState === 4 && xhrMinutes.status === 200) {
-  var prayerMinutes = parseInt(xhrMinutes.responseText);
-}
-
-document.getElementById('prayertext').innerHTML = prayerName + " In " + 
-    (prayerHours === 1 ? prayerHours + " Hour, " : prayerHours + " Hours, ") + 
-    (prayerMinutes === 1 ? prayerMinutes + " Minute" : prayerMinutes + " Minutes").replace("1 Minutes", "1 Minute");
-
-
-}, 5000);

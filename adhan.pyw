@@ -18,15 +18,15 @@ lines = prayerTime.split('\n')[1:-1]
 lines = prayerTime.split('\n')[1:-1]
 lines = prayerTime.split('\n')[1:-1]
 del lines[0]
-del lines[1]
 lines = [line.replace(':00', ':0') for line in lines]
 
 
 fajrHour, fajrMin = map(int, lines[0].split(':'))
-zuhrHour, zuhrMin = map(int, lines[1].replace('00', '0').split(':'))
-asrHour, asrMin = map(int, lines[2].split(':'))
-maghribHour, maghribMin = map(int, lines[3].split(':'))
-ishaHour, ishaMin = map(int, lines[4].split(':'))
+sunriseHour, sunriseMin = map(int, lines[1].replace('00', '0').split(':'))
+zuhrHour, zuhrMin = map(int, lines[2].replace('00', '0').split(':'))
+asrHour, asrMin = map(int, lines[3].split(':'))
+maghribHour, maghribMin = map(int, lines[4].split(':'))
+ishaHour, ishaMin = map(int, lines[5].split(':'))
 
 
 lines = [line.lstrip('0') if line[0] == '0' else line for line in lines]
@@ -34,16 +34,18 @@ lines = [line[:-2] + line[-1] if line[-2] == '0' else line for line in lines]
 
 
 fajrHour, fajrMin = map(int, lines[0].split(':'))
-zuhrHour, zuhrMin = map(int, lines[1].split(':'))
-asrHour, asrMin = map(int, lines[2].split(':'))
-maghribHour, maghribMin = map(int, lines[3].split(':'))
-ishaHour, ishaMin = map(int, lines[4].split(':'))
+sunriseHour, sunriseMin = map(int, lines[1].split(':'))
+zuhrHour, zuhrMin = map(int, lines[2].split(':'))
+asrHour, asrMin = map(int, lines[3].split(':'))
+maghribHour, maghribMin = map(int, lines[4].split(':'))
+ishaHour, ishaMin = map(int, lines[5].split(':'))
 
 
 current_time = datetime.now().time()
 
 
 fajr_time = time(fajrHour, fajrMin)
+sunrise_time = time(sunriseHour, sunriseMin)
 zuhr_time = time(zuhrHour, zuhrMin)
 asr_time = time(asrHour, asrMin)
 maghrib_time = time(maghribHour, maghribMin)
@@ -82,6 +84,11 @@ diff_hour = int(diff_seconds // 3600)
 diff_minute = int((diff_seconds % 3600) // 60)
 
 
+if diff_hour < 0:
+    diff_hour += 24
+    diff_minute *= 1
+
+
 with open('name.txt', 'w') as file:
     file.write(f'{next_prayer}\n')
     
@@ -90,3 +97,38 @@ with open('hours.txt', 'w') as file:
     
 with open('minutes.txt', 'w') as file:
     file.write(f'{diff_minute}\n')
+
+
+if current_time < sunrise_time:
+    sun_state = "Sunrise"
+    sun_state_hour = sunriseHour
+    sun_state_min = sunriseMin
+elif current_time >= sunrise_time and current_time < maghrib_time:
+    sun_state = "Sunset"
+    sun_state_hour = maghribHour
+    sun_state_min = maghribMin
+else:
+    sun_state = "Sunrise"
+    sun_state_hour = sunriseHour
+    sun_state_min = sunriseMin
+
+
+diff2 = datetime.combine(datetime.today(), time(sun_state_hour, sun_state_min)) - datetime.combine(datetime.today(), current_time)
+diff_seconds2 = diff2.total_seconds()
+diff_hour2 = int(diff_seconds2 // 3600)
+diff_minute2 = int((diff_seconds2 % 3600) // 60)
+
+
+if diff_hour2 < 0:
+    diff_hour2 += 24
+    diff_minute2 *= 1
+
+
+with open('sunstate.txt', 'w') as file:
+    file.write(f'{sun_state}\n')
+    
+with open('sunhours.txt', 'w') as file:
+    file.write(f'{diff_hour2}\n')
+    
+with open('sunminutes.txt', 'w') as file:
+    file.write(f'{diff_minute2}\n')
