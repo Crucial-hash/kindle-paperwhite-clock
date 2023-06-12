@@ -1,0 +1,131 @@
+@font-face{
+    font-family: thin;
+    src:url(/clock/fonts/productsans.ttf);
+}
+
+@font-face{
+    font-family: reg;
+    src:url(/clock/fonts/Product\ Sans\ Regular.ttf)
+}
+
+:root {
+    --trackurl:
+    --flagurl:
+    --tracknameallign:
+    --flagallign:
+    --raceweekend:
+}
+
+body{
+    background-color: black;
+    margin: 0%;
+    padding: 0%;
+    transform: rotate(90deg);
+    cursor: none;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    height: 449px;
+    width: 449px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container{
+    font-family: 'thin';
+    color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-202%, -220%);
+    font-size: 400px;
+}
+
+.container1{
+    font-family: 'thin';
+    color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-202%, -140%);
+    font-size: 400px;
+}
+
+.track{
+    content: var(--trackurl);
+    width: 65%;
+    height: 65%;
+    transform: translate(67%, 68%);
+}
+
+.flag{
+    content: var(--flagurl);
+    width: 13%;
+    height: 13%;
+    transform: var(--flagallign);
+}
+
+.tracknamediv{
+    font-family: 'reg';
+    font-size: 50px;
+    transform: var(--tracknameallign);
+    color: #ffffff;
+}
+
+.sessions{
+    color: #ffffff;
+    font-size: 44px;
+    font-family: 'reg';
+    transform: translate(51%, 720%);
+}
+
+.raceweekend{
+    font-size: 40px;
+    font-family: 'reg';
+    transform: var(--raceweekend);
+    color: #ffffff;
+}
+
+button {
+    height: 200px;
+    width: 500px;
+    background-color: transparent;
+    border: none;
+    transform: translate(60%, 395%);
+    top: 100px;
+    left: 50px;
+    cursor: none;
+    position:absolute; top:0; right:0;
+    z-index:2
+  }
+
+  .prayertextdiv {
+    font-size: 32px;
+    color: transparent;
+    transform: translate(-1.5%, 2260%);
+    font-family: 'reg';
+    position:absolute; top:0; right:0;
+  }
+
+  .prayertext {
+    position:absolute; top:0; right:0;
+  }
+
+  .suntextdiv {
+    font-size: 32px;
+    color: transparent;
+    transform: translate(-1.5%, 2260%);
+    font-family: 'reg';
+    position:absolute; top:0; right:0;
+  }
+
+  .suntext {
+    position:absolute; top:0; right:0;
+  }
+
+  .white {
+    color: #ffffff;
+  }
