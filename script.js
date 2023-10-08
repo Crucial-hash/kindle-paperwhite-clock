@@ -77,17 +77,21 @@ const prayer = document.getElementById("prayertext");
 const sun = document.getElementById("suntext");
 let state = 0;
 
+
 button.addEventListener("click", function() {
   if (state === 0) {
     state = 1;
+    minuteChanged()
     prayer.classList.add("white");
     sun.classList.remove("white");
   } else if (state === 1) {
     state = 2;
+    minuteChanged()
     sun.classList.add("white");
     prayer.classList.remove("white");
   } else {
     state = 0;
+    minuteChanged()
     prayer.classList.remove("white");
     sun.classList.remove("white");
     document.body.style.backgroundColor = '#ffffff';
@@ -98,8 +102,10 @@ button.addEventListener("click", function() {
 });
 
 
-window.setInterval(function(){
+minuteChanged()
 
+
+function minuteChanged() {
 
   if (state === 1) {
     prayer.style.transform = "translate(3%, 2260%)";
@@ -191,19 +197,24 @@ window.setInterval(function(){
     var hrs24;
     if (isDaylightSavingTime()) {
       tracktime = moment().add(1, 'hour').format('MMDDHHmm');
-      hrs24 = moment().add(1, 'hour').format('HHmmss');
+      hrs24 = moment().add(1, 'hour').format('HHmm');
     } else {
       tracktime = moment().format('MMDDHHmm');
-      hrs24 = moment().format('HHmmss');
+      hrs24 = moment().format('HHmm');
     }
 
 
-  if (hrs24 == '064500' ||
-      hrs24 == '100000' ||
-      hrs24 == '130000' ||
-      hrs24 == '180000' ||
-      hrs24 == '220000') {
+    if (
+      hrs24 == '0645' ||
+      hrs24 == '1000' ||
+      hrs24 == '1300' ||
+      hrs24 == '1800' ||
+      hrs24 == '2200'
+    ) {
       document.body.style.backgroundColor = '#ffffff';
+      setTimeout(function() {
+          document.body.style.backgroundColor = '#000000';
+      }, 1000);
     } else {
       document.body.style.backgroundColor = '#000000';
     }
@@ -283,7 +294,7 @@ window.setInterval(function(){
 
   //QATAR TO UNITED STATES
 
-  if (tracktime >= '10081630') { setProperties("/clock/image/cota.png","37.5%","-16%","690%","205%","/clock/image/usaflag.png","63%","185%","20 - 22 Oct","P1 Q SS S R","United States") }
+  if (tracktime >= '10081930') { setProperties("/clock/image/cota.png","37.5%","-16%","690%","205%","/clock/image/usaflag.png","63%","185%","20 - 22 Oct","P1 Q SS S R","United States") }
 
   //UNITED STATES TO MEXICO
 
@@ -309,6 +320,19 @@ window.setInterval(function(){
   var oldText = document.getElementById("session").innerHTML;
   var result = boldString(oldText, "R");
   document.getElementById("session").innerHTML = result;
+}
 
 
-}, 1000);
+function getCurrentMinute() {
+    return new Date().getMinutes();
+}
+
+
+let currentMinute = getCurrentMinute();
+setInterval(function() {
+    const newMinute = getCurrentMinute();
+    if (newMinute !== currentMinute) {
+        minuteChanged();
+        currentMinute = newMinute;
+    }
+}, 60000);
