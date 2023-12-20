@@ -31,7 +31,7 @@
 ### 🖥️ Server
 
 - Download the zip for this repository and place the files in a folder for them to be hosted in.
-- Open a command prompt window and type this in, http-server -c-1 make sure this is in the folder BEFORE "clock" eg: Documents when clock is at Documents/Clock note the IP address.
+- Open a command prompt window and type this in, http-server -c-1 then note the IP address.
 - Now you need to make [task scheduler run the VBS file](https://github.com/Crucial-hash/kindle-paperwhite-clock/blob/main/images/vbs-task-scheduler.png) in the background [every 10 seconds](https://superuser.com/questions/293445/windows-task-scheduler-schedule-task-to-run-once-every-10-seconds) that executes the python file, this will request the new timing for the prayer update and store it in 3 files.
 
 
