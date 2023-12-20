@@ -1,11 +1,11 @@
 @font-face{
     font-family: thin;
-    src:url(/fonts/productsans.ttf);
+    src:url(./fonts/productsans.ttf);
 }
 
 @font-face{
     font-family: reg;
-    src:url(/fonts/Product\ Sans\ Regular.ttf)
+    src:url(./fonts/Product\ Sans\ Regular.ttf)
 }
 
 :root {
