@@ -7,40 +7,36 @@
 
 - The main part of this project is the [Clock Design](/images/pixel-lockscreen-clock.png) which is inspired by Google's [Material You](https://material.io/blog/announcing-material-you) Design. The lock screen is where this clock's design is from, being called the "double line" clock.
 
-- I wanted to use up the display, so I added the next Formula 1 Grand Prix to the side, this is a nice feature for knowing the dates, track, country and sessions that will occur in that specific race weekend. The information is all pulled from the [Formula 1](https://www.formula1.com/en/racing/2023.html) website as well as the track images. A future project will be trying to use their API to pull race information rather than manually inputting the data myself.
-
-- The next prayer feature is useful for knowing when the next prayer is, at least for me, I could not connect the Kindle to the internet but only to a local network. This was undesirable, as I would not be able to use any sort of online API to pull the next prayer from. I have made a workaround but it is specific to me and you may need to change some things to get it to work on your side. I have made it so I am hosting the website on my server. This server runs a Python script that scrapes the website (API in future) and grabs the prayer time and name. This is then stored in the root and pulled using javascript. The website is hosted with a no-cache setting, and is not very ideal, however, this should be improved in the near future. I have also made a transparent button in front of the text that toggles the text colour so it makes it visible or not.
-
 
 
 
 ## 🔑 Prerequisites
 
-- Kindle Paperwhite 2 (PW2) (You may be able to use other Kindle's but the website WILL NOT be optimised).
+- Kindle Paperwhite 2 (PW2) (You may be able to use other Kindle's but the website will not be optimised).
 - [Jailbroken Kindle](https://www.mobileread.com/forums/showthread.php?t=346037) with [Alpine Linux](https://github.com/thomaspreece/alpine_kindle/) installed. (This is a modified version with Midori browser instead of Chromium which works better on the PW2 but for other Kindle's it should work.).
-- Always-on Computer (Server), There may be ways to work around this but this is what I did to access the website. (Make sure to download [Python](https://www.python.org/) and download the libraries BeautifulSoup and requests if you need to use the prayer function and [Node.js](https://nodejs.org/en) with the http-server library to host the server.
+- Always-on Computer (Server), There may be ways to work around this, but this is what I did to access the website. (Make sure to download [Python](https://www.python.org/) and download the libraries [BeautifulSoup](https://pypi.org/project/beautifulsoup4/), [lxml](https://pypi.org/project/lxml/), and [requests](https://pypi.org/project/requests/) if you want to use the prayer function. You will also need [Node.js](https://nodejs.org/en) with the [http-server](https://www.npmjs.com/package/http-server) library to host the server.
 
 
 
 
 ## 📄 Instructions
 
-- This will be very brief but should somewhat guide you to replicating this on your own.
+- This will be brief but should somewhat guide you to replicating this on your own.
 
 
 ### 🖥️ Server
 
-- Download the zip for this repository and place the files in a folder for them to be hosted in.
-- Open a command prompt window and type this in, http-server -c-1 then note the IP address.
-- Now you need to make [task scheduler run the VBS file](https://github.com/Crucial-hash/kindle-paperwhite-clock/blob/main/images/vbs-task-scheduler.png) in the background [every 10 seconds](https://superuser.com/questions/293445/windows-task-scheduler-schedule-task-to-run-once-every-10-seconds) that executes the python file, this will request the new timing for the prayer update and store it in 3 files.
+- Clone the repository and place the folder where you need it.
+- Open command prompt in the folder and type this command ``` http-server -c-1 ```.
+- Run the python file in the background.
 
 
 ### 📖 Kindle Paperwhite
 
 - Before booting into Alpine Linux, in the search bar type ∼ds, this will disable the screensaver, therefore, stopping the screen from turning off.
-- This is optional but I prefer the backlight off, you can do this by changing the brightness to the minimum
+- This is optional but I prefer the backlight off, you can do this by placing a magnet on the back off the kindle to trick it into thinking the cover is closed.
 - Boot into Alpine Linux through KUAL and open Midori.
-- Use the IP address from before, you will see a directory window and click on the "clock" folder.
+- Use the IP address from before, you should then see the website.
 - Click the fullscreen icon in the top right.
 
 
@@ -54,7 +50,5 @@
 
 ## 💡 Other Information
 
-- This project may not be maintained and if so, not regularly.
-- If you feel like there is an issue or an improvement to be made please do so on the issues tab.
-- contributing to this project will be greatly appreciated.
+- Contributing to this project will be greatly appreciated.
 - Thank you for reading about this project!
