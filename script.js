@@ -222,95 +222,103 @@ function minuteChanged() {
 
   //BAHRAIN
 
-  if (tracktime < '03051630') { setProperties("./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","60.4%","145%","03 - 05 March","P1 P2 P3 Q R","Bahrain") }
+  if (tracktime < '03021630') { setProperties("./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","54.1%","145%","29 - 02 Feb/March","P1 P2 P3 Q R","Bahrain") }
 
   //BAHRAIN TO SAUDI
 
-  if (tracktime >= '03051630') { setProperties("./image/saudi.png","38%","-24%","692%","140%","./image/saudiflag.png","63.5%","145%","17 - 19 March","P1 P2 P3 Q R","Saudi Arabia") }
+  if (tracktime >= '03021630') { setProperties("./image/saudi.png","38%","-24%","692%","140%","./image/saudiflag.png","60.5%","145%","07 - 09 March","P1 P2 P3 Q R","Saudi Arabia") }
 
   //SAUDI TO AUSTRALIA
 
-  if (tracktime >= '03191830') { setProperties("./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","53.5%","145%","31 - 02 March/April","P1 P2 P3 Q R","Australia") }
+  if (tracktime >= '03091830') { setProperties("./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%","22 - 24 March","P1 P2 P3 Q R","Australia") }
 
-  //AUSTRALIA TO AZERBAIJAN
+  //AUSTRALIA TO JAPAN
 
-  if (tracktime >= '04020730') { setProperties("./image/azerbaijan.png","38.5%","-20%","680%","161%","./image/azerbaijanflag.png","64%","173%","28 - 30 April","P1 Q SS S R","Azerbaijan") }
+  if (tracktime >= '03240530') { setProperties("./image/japan.png","39%","-24%","620%","140%","./image/japanflag.png","62.5%","145%","05 - 07 April","P1 P2 P3 Q R","Japan") }
 
-  //AZERBAIJAN TO MIAMI
+  //JAPAN TO CHINA
 
-  if (tracktime >= '04301330') { setProperties("./image/miami.png","37.5%","-24%","630%","140%","./image/usaflag.png","60.4%","145%","05 - 07 May","P1 P2 P3 Q R","Miami") }
+  if (tracktime >= '04070730') { setProperties("./image/china.png","37.5%","-20%","620%","175%","./image/chinaflag.png","63.5%","170%","19 - 21 April","P1 Q SS S R","China") }
+
+  //CHINA TO MIAMI
+
+  if (tracktime >= '04210930') { setProperties("./image/miami.png","37.5%","-24%","630%","140%","./image/usaflag.png","62.3%","145%","03 - 05 May","P1 Q SS S R","Miami") }
 
   //MIAMI TO IMOLA
 
-  if (tracktime >= '05072200') { setProperties("./image/imola.png","37.5%","-24%","615%","140%","./image/italyflag.png","64%","145%","19 - 21 May","P1 P2 P3 Q R","Imola") }
+  if (tracktime >= '05052230') { setProperties("./image/imola.png","37.5%","-24%","615%","140%","./image/italyflag.png","63%","145%","17 - 19 May","P1 P2 P3 Q R","Imola") }
 
   //IMOLA TO MONACO
 
-  if (tracktime >= '05211530') { setProperties("./image/monaco.png","37.5%","-24%","630%","140%","./image/monacoflag.png","62.6%","145%","26 - 28 May","P1 P2 P3 Q R","Monaco") }
+  if (tracktime >= '05191530') { setProperties("./image/monaco.png","37.5%","-24%","630%","140%","./image/monacoflag.png","62.6%","145%","24 - 26 May","P1 P2 P3 Q R","Monaco") }
 
-  //MONACO TO SPAIN
+  //MONACO TO CANADA
 
-  if (tracktime >= '05281530') { setProperties("./image/spain.png","37.5%","-32%","630%","80%","./image/spainflag.png","62.6%","120%","02 - 04 June","P1 P2 P3 Q R","Spain") }
+  if (tracktime >= '05261530') { setProperties("./image/canada.png","37.5%","-24%","630%","140%","./image/canadaflag.png","61%","145%","07 - 09 June","P1 P2 P3 Q R","Canada") }
 
-  //SPAIN TO CANADA
+  //CANADA TO SPAIN
 
-  if (tracktime >= '06041530') { setProperties("./image/canada.png","37.5%","-24%","630%","140%","./image/canadaflag.png","62.4%","145%","16 - 18 June","P1 P2 P3 Q R","Canada") }
+  if (tracktime >= '06092030') { setProperties("./image/spain.png","37.5%","-32%","630%","80%","./image/spainflag.png","63.4%","120%","21 - 23 June","P1 P2 P3 Q R","Spain") }
 
-  //CANADA TO AUSTRIA
+  //SPAIN TO AUSTRIA
 
-  if (tracktime >= '06182030') { setProperties("./image/austria.png","43%","-20%","670%","160%","./image/austriaflag.png","61.4%","165%","31 - 02 June/July","P1 Q SS S R","Austria") }
+  if (tracktime >= '06231530') { setProperties("./image/austria.png","43%","-20%","670%","160%","./image/austriaflag.png","67%","165%","28 - 30 June","P1 Q SS S R","Austria") }
 
   //AUSTRIA TO BRITAIN
 
-  if (tracktime >= '07021530') { setProperties("./image/britain.png","39%","-15%","630%","200%","./image/britainflag.png","64%","220%","07 - 09 July","P1 P2 P3 Q R","Britain") }
+  if (tracktime >= '06301530') { setProperties("./image/britain.png","39%","-15%","630%","200%","./image/britainflag.png","63.7%","220%","05 - 07 July","P1 P2 P3 Q R","Britain") }
 
   //BRITAIN TO HUNGARY
 
-  if (tracktime >= '07091630') { setProperties("./image/hungary.png","40%","-21%","660%","159%","./image/hungaryflag.png","66.5%","155%","21 - 23 July","P1 P2 P3 Q R","Hungary") }
+  if (tracktime >= '07071630') { setProperties("./image/hungary.png","40%","-21%","660%","159%","./image/hungaryflag.png","66%","155%","19 - 21 July","P1 P2 P3 Q R","Hungary") }
 
   //HUNGARY TO BELGIUM
 
-  if (tracktime >= '07231530') { setProperties("./image/belgium.png","37.5%","-24%","630%","140%","./image/belgiumflag.png","62.5%","145%","28 - 30 July","P1 Q SS S R","Belgium") }
+  if (tracktime >= '07211530') { setProperties("./image/belgium.png","37.5%","-24%","630%","140%","./image/belgiumflag.png","62.7%","145%","26 - 28 July","P1 P2 P3 Q R","Belgium") }
 
   //BELGIUM TO NETHERLANDS
 
-  if (tracktime >= '07301530') { setProperties("./image/netherlands.png","41%","-17%","700%","195%","./image/netherlandsflag.png","64.7%","185%","25 - 27 Aug","P1 P2 P3 Q R","Netherlands") }
+  if (tracktime >= '07281530') { setProperties("./image/netherlands.png","41%","-17%","700%","195%","./image/netherlandsflag.png","64.7%","185%","23 - 25 Aug","P1 P2 P3 Q R","Netherlands") }
 
-  //NETHERLANDS TO ITALY
+  //NETHERLANDS TO MONZA
 
-  if (tracktime >= '08271530') { setProperties("./image/monza.png","41%","-24%","620%","140%","./image/italyflag.png","65%","145%","01 - 03 Sep","P1 P2 P3 Q R","Italy") }
+  if (tracktime >= '08251530') { setProperties("./image/monza.png","41%","-24%","620%","140%","./image/italyflag.png","59.9%","145%","30 - 01 Aug/Sep","P1 P2 P3 Q R","Italy") }
 
-  //ITALY TO SINGAPORE
+  //MONZA TO AZERBAIJAN
 
-  if (tracktime >= '09031530') { setProperties("./image/singapore.png","38%","-24%","670%","140%","./image/singaporeflag.png","66.5%","145%","15 - 17 Sep","P1 P2 P3 Q R","Singapore") }
+  if (tracktime >= '09011530') { setProperties("./image/azerbaijan.png","38.5%","-20%","680%","161%","./image/azerbaijanflag.png","64%","173%","13 - 15 Sep","P1 P2 P3 Q R","Azerbaijan") }
 
-  //SINGAPORE TO JAPAN
+  //AZERBAIJAN TO SINGAPORE
 
-  if (tracktime >= '09171430') { setProperties("./image/japan.png","42%","-24%","650%","140%","./image/japanflag.png","67.5%","145%","22 - 24 Sep","P1 P2 P3 Q R","Japan") }
+  if (tracktime >= '09151330') { setProperties("./image/singapore.png","37.3%","-24%","666%","140%","./image/singaporeflag.png","63%","145%","20 - 22 Sep","P1 P2 P3 Q R","Singapore") }
 
-  //JAPAN TO QATAR
+  //SINGAPORE TO UNITED STATES
 
-  if (tracktime >= '09240730') { setProperties("./image/qatar.png","41%","-24%","645%","140%","./image/qatarflag.png","66%","145%","06 - 08 Oct","P1 Q SS S R","Qatar") }
-
-  //QATAR TO UNITED STATES
-
-  if (tracktime >= '10081930') { setProperties("./image/cota.png","37.5%","-16%","690%","205%","./image/usaflag.png","63%","185%","20 - 22 Oct","P1 Q SS S R","United States") }
+  if (tracktime >= '09221430') { setProperties("./image/cota.png","37.5%","-16%","690%","205%","./image/usaflag.png","62%","185%","18 - 20 Oct","P1 Q SS S R","United States") }
 
   //UNITED STATES TO MEXICO
 
-  if (tracktime >= '10222130') { setProperties("./image/mexico.png","40%","-24%","640%","140%","./image/mexicoflag.png","65%","145%","27 - 29 Oct","P1 P2 P3 Q R","Mexico") }
+  if (tracktime >= '10202130') { setProperties("./image/mexico.png","38.1%","-24%","633%","140%","./image/mexicoflag.png","63.5%","145%","25 - 27 Oct","P1 P2 P3 Q R","Mexico") }
 
   //MEXICO TO BRAZIL
 
-  if (tracktime >= '10292130') { setProperties("./image/brazil.png","40%","-24%","640%","140%","./image/brazilflag.png","65%","145%","03 - 05 Nov","P1 Q SS S R","Brazil") }
+  if (tracktime >= '10272130') { setProperties("./image/brazil.png","35.8%","-24%","600%","140%","./image/brazilflag.png","61%","145%","01 - 03 Nov","P1 Q SS S R","Brazil") }
 
   //BRAZIL TO LAS VEGAS
 
-  if (tracktime >= '11051830') { setProperties("./image/lasvegas.png","39%","-22%","670%","154%","./image/usaflag.png","66.5%","160%","17 - 19 Nov","P1 P2 P3 Q R","Las Vegas") }
+  if (tracktime >= '11031830') { setProperties("./image/lasvegas.png","37.5%","-22%","660%","154%","./image/usaflag.png","63.6%","160%","21 - 23 Nov","P1 P2 P3 Q R","Las Vegas") }
 
-  //LAS VEGAS TO ABU DHABI
+  //LAS VEGAS TO QATAR
 
-  if (tracktime >= '11190730') { setProperties("./image/abudhabi.png","37.5%","-24%","670%","140%","./image/abudhabiflag.png","64%","145%","24 - 26 Nov","P1 P2 P3 Q R","Abu Dhabi") }
+  if (tracktime >= '11240730') { setProperties("./image/qatar.png","39%","-24%","635%","140%","./image/qatarflag.png","55%","145%","29 - 01 Nov/Dec","P1 Q SS S R","Qatar") }
+
+  //QATAR TO ABU DHABI
+
+  if (tracktime >= '12011830') { setProperties("./image/abudhabi.png","37.5%","-24%","670%","140%","./image/abudhabiflag.png","62%","145%","06 - 08 Dec","P1 P2 P3 Q R","Abu Dhabi") }
+
+  //ABU DHABI TO BAHRAIN (NEXT YEAR)
+
+  if (tracktime >= '12081430') { setProperties("./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","54.1%","145%","29 - 02 Feb/March","P1 P2 P3 Q R","Bahrain") }
 
 
   function boldString(str, find){
