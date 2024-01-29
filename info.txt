@@ -1,51 +1,5 @@
-1h 30m after race has finished show next race
+1h 30m after race has finished show next race.
 
-border of all images are 34 pixels
+border of all images are 34 pixels.
 
-flags need to be 2560x1536 and tracks are 997x749 (tracks are off official f1 page)
-
-03051630 - bahrain (below this time)
-
-03051630 - bahrain to saudi
-
-03191830 - saudi to australia
-
-04020730 - australia to azerbaijan (sprint)
-
-04301330 - azerbaijan to miami
-
-05072200 - miami to imola
-
-05211530 - imola to monaco
-
-05281530 - monaco to spain
-
-06041530 - spain to canada
-
-06182030 - canada to austria (sprint)
-
-07021530 - austria to britain
-
-07091630 - britain to hungary
-
-07231530 - hungary to belgium (sprint)
-
-07301530 - belgium to netherlands
-
-08271530 - netherlands to italy
-
-09031530 - italy to singapore
-
-09171430 - singapore to japan
-
-09240730 - japan to qatar (sprint)
-
-10081630 - qatar to united states (sprint)
-
-10222130 - united states to mexico
-
-10292130 - mexico to brazil (sprint)
-
-11051830 - brazil to las vegas
-
-11190730 - las vegas to abu dhabi
+flags need to be 2560x1536 and tracks are 997x748 (tracks are off official f1 page).
