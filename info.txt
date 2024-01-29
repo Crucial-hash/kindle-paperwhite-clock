@@ -1,5 +1,5 @@
-1h 30m after race has finished show next race
+1h 30m after race has finished show next race.
 
-border of all images are 34 pixels
+border of all images are 34 pixels.
 
-flags need to be 2560x1536 and tracks are 997x748 (tracks are off official f1 page)
+flags need to be 2560x1536 and tracks are 997x748 (tracks are off official f1 page).
