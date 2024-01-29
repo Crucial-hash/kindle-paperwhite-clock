@@ -306,7 +306,7 @@ function minuteChanged() {
 
   //BRAZIL TO LAS VEGAS
 
-  if (tracktime >= '11031830') { setProperties("./image/lasvegas.png","37.5%","-22%","660%","154%","./image/usaflag.png","63.6%","160%","21 - 23 Nov","P1 P2 P3 Q R","Las Vegas") }
+  if (tracktime >= '11031830') { setProperties("./image/lasvegas.png","37.5%","-22%","660%","154%","./image/usaflag.png","63.6%","160%","22 - 23 Nov","P1 P2 P3 Q R","Las Vegas") }
 
   //LAS VEGAS TO QATAR
 
@@ -318,7 +318,7 @@ function minuteChanged() {
 
   //ABU DHABI TO BAHRAIN (NEXT YEAR)
 
-  if (tracktime >= '12081430') { setProperties("./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","54.1%","145%","29 - 02 Feb/March","P1 P2 P3 Q R","Bahrain") }
+  if (tracktime >= '12081430') { setProperties("./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","54.1%","145%"," ","P1 P2 P3 Q R","Bahrain") }
 
 
   function boldString(str, find){
