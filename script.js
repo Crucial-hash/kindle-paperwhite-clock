@@ -316,9 +316,9 @@ function minuteChanged() {
 
   if (tracktime >= '12011830') { setProperties("./image/abudhabi.png","37.5%","-24%","670%","140%","./image/abudhabiflag.png","62%","145%","06 - 08 Dec","P1 P2 P3 Q R","Abu Dhabi") }
 
-  //ABU DHABI TO BAHRAIN (NEXT YEAR)
+  //ABU DHABI TO AUSTRALIA (NEXT YEAR)
 
-  if (tracktime >= '12081430') { setProperties("./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","54.1%","145%"," ","P1 P2 P3 Q R","Bahrain") }
+  if (tracktime >= '12081430') { setProperties("./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%"," ","P1 P2 P3 Q R","Australia") }
 
 
   function boldString(str, find){
