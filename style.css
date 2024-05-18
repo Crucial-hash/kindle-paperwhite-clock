@@ -89,12 +89,25 @@ span{
     color: #ffffff;
 }
 
-button {
+#prayerbutton {
     height: 200px;
     width: 500px;
     background-color: transparent;
     border: none;
     transform: translate(60%, 395%);
+    top: 100px;
+    left: 50px;
+    cursor: none;
+    position:absolute; top:0; right:0;
+    z-index:2
+  }
+
+  #reloadbutton {
+    height: 150px;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    transform: translate(430%, 130%);
     top: 100px;
     left: 50px;
     cursor: none;
