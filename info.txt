@@ -3,7 +3,3 @@
 border of all images are 34 pixels.
 
 flags need to be 2560x1536 and tracks are 997x748 (tracks are off official f1 page).
-
-
-
-
