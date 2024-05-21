@@ -1,0 +1,20 @@
+name: Trigger workflow in Crucial
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Repo Crucial Workflow
+        env:
+          GITHUB_TOKEN: ${{ secrets.PRIVATE_TOKEN_GITHUB }}
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            https://api.github.com/repos/Crucial-hash/crucial/actions/workflows/update-submodules.yml/dispatches \
+            -d '{"ref":"main"}'
