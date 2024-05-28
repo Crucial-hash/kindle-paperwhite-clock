@@ -3,3 +3,4 @@ info.txt export-ignore
 LICENSE export-ignore
 images/ export-ignore
 .gitattributes export-ignore
+.github/ export-ignore
