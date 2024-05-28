@@ -3,7 +3,6 @@ function displayTime(){
   var hrs = dateTime.getHours();
   var min = dateTime.getMinutes();
 
-
   function isDaylightSavingTime() {
     const today = new Date();
     const month = today.getMonth();
@@ -16,9 +15,7 @@ function displayTime(){
     return dstResult;
   }
 
-
   isDaylightSavingTime();
-
 
   if (hrs == 0){
       hrs = hrs +12
@@ -36,18 +33,15 @@ function displayTime(){
       min = "0" + min
   }
 
-
   document.getElementById('hours').innerHTML = hrs;
   document.getElementById('minutes').innerHTML = min;
 
 }
 
-
 setInterval(displayTime, 10);
 var width = screen.width;
 var height = screen.height;
 document.documentElement.style.cursor = 'none';
-
 
 var root = document.querySelector(':root');
 var rootStyles = getComputedStyle(root);
@@ -57,9 +51,7 @@ var tracknameallign = rootStyles.getPropertyValue('--tracknameallign');
 var flagallign = rootStyles.getPropertyValue('--flagallign');
 var raceweekend = rootStyles.getPropertyValue('--raceweekend');
 
-
 function setProperties(trackImage,trackNameAllignX,trackNameAllignY,flagAllignX,flagAllignY,flagImage,raceWeekendX,raceWeekendY,raceWeekendTime,session,trackName){
-
 
 root.style.setProperty('--trackurl', 'url(' + trackImage + ')')
 root.style.setProperty('--tracknameallign', 'translate(' + trackNameAllignX + ',' + trackNameAllignY + ')')
@@ -71,12 +63,10 @@ document.getElementById('session').innerHTML = session;
 document.getElementById('trackname').innerHTML = trackName;
 }
 
-
 const button = document.getElementById("prayerbutton");
 const prayer = document.getElementById("prayertext");
 const sun = document.getElementById("suntext");
 let state = 0;
-
 
 button.addEventListener("click", function() {
   if (state === 0) {
@@ -101,9 +91,7 @@ button.addEventListener("click", function() {
   }
 });
 
-
 minuteChanged()
-
 
 function minuteChanged() {
 
@@ -113,72 +101,67 @@ function minuteChanged() {
     prayer.style.transform = "none";
   }
 
-
   if (state === 2) {
     sun.style.transform = "translate(1%, 2260%)";
   } else {
     sun.style.transform = "none";
   }
 
-
   var xhrName = new XMLHttpRequest();
   xhrName.open("GET", "./name.txt", false);
   xhrName.send();
-  
+
   if(xhrName.readyState === 4 && xhrName.status === 200) {
     var prayerName = xhrName.responseText;
   }
-  
+
   var xhrHours = new XMLHttpRequest();
   xhrHours.open("GET", "./hours.txt", false);
   xhrHours.send();
-  
+
   if(xhrHours.readyState === 4 && xhrHours.status === 200) {
     var prayerHours = parseInt(xhrHours.responseText);
   }
-  
+
   var xhrMinutes = new XMLHttpRequest();
   xhrMinutes.open("GET", "./minutes.txt", false);
   xhrMinutes.send();
-  
+
   if(xhrMinutes.readyState === 4 && xhrMinutes.status === 200) {
     var prayerMinutes = parseInt(xhrMinutes.responseText);
   }
-  
 
   var xhrSunState = new XMLHttpRequest();
   xhrSunState.open("GET", "./sunstate.txt", false);
   xhrSunState.send();
-  
+
   if(xhrSunState.readyState === 4 && xhrSunState.status === 200) {
     var sunState = xhrSunState.responseText;
   }
-  
+
   var xhrSunHours = new XMLHttpRequest();
   xhrSunHours.open("GET", "./sunhours.txt", false);
   xhrSunHours.send();
-  
+
   if(xhrSunHours.readyState === 4 && xhrSunHours.status === 200) {
     var sunHours = parseInt(xhrSunHours.responseText);
   }
-  
+
   var xhrSunMinutes = new XMLHttpRequest();
   xhrSunMinutes.open("GET", "./sunminutes.txt", false);
   xhrSunMinutes.send();
-  
+
   if(xhrSunMinutes.readyState === 4 && xhrSunMinutes.status === 200) {
     var sunMinutes = parseInt(xhrSunMinutes.responseText);
   }
 
-
   document.getElementById('prayertext').innerHTML = prayerName + " In " + 
       (prayerHours === 1 ? prayerHours + " Hour, " : prayerHours + " Hours, ") + 
       (prayerMinutes === 1 ? prayerMinutes + " Minute" : prayerMinutes + " Minutes").replace("1 Minutes", "1 Minute");
-  
+
   document.getElementById('suntext').innerHTML = sunState +  " In " + 
       (sunHours === 1 ? sunHours + " Hour, " : sunHours + " Hours, ") +
       (sunMinutes === 1 ? sunMinutes + " Minute" : sunMinutes + " Minutes").replace("1 Minutes", "1 Minute");
-
 
   function isDaylightSavingTime() {
       const today = new Date();
@@ -192,7 +175,6 @@ function minuteChanged() {
       return false;
     }
 
-
     var tracktime;
     var hrs24;
     if (isDaylightSavingTime()) {
@@ -202,7 +184,6 @@ function minuteChanged() {
       tracktime = moment().format('MMDDHHmm');
       hrs24 = moment().format('HHmm');
     }
-
 
     if (
       hrs24 == '0645' ||
@@ -218,7 +199,6 @@ function minuteChanged() {
     } else {
       document.body.style.backgroundColor = '#000000';
     }
-
 
   //BAHRAIN
 
@@ -320,7 +300,6 @@ function minuteChanged() {
 
   if (tracktime >= '12081430') { setProperties("./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%"," ","P1 P2 P3 Q R","Australia") }
 
-
   function boldString(str, find){
     var re = new RegExp(find, 'g');
     return str.replace(re, '<b>'+find+'</b>');
@@ -330,11 +309,9 @@ function minuteChanged() {
   document.getElementById("session").innerHTML = result;
 }
 
-
 function getCurrentMinute() {
     return new Date().getMinutes();
 }
-
 
 let currentMinute = getCurrentMinute();
 setInterval(function() {

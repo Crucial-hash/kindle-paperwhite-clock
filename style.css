@@ -34,6 +34,32 @@ span{
     text-overflow: ellipsis;
 }
 
+#prayerbutton {
+  height: 200px;
+  width: 500px;
+  background-color: transparent;
+  border: none;
+  transform: translate(60%, 395%);
+  top: 100px;
+  left: 50px;
+  cursor: none;
+  position:absolute; top:0; right:0;
+  z-index:2
+}
+
+#reloadbutton {
+  height: 150px;
+  width: 150px;
+  background-color: transparent;
+  border: none;
+  transform: translate(430%, 130%);
+  top: 100px;
+  left: 50px;
+  cursor: none;
+  position:absolute; top:0; right:0;
+  z-index:2
+}
+
 .container{
     font-family: 'thin';
     color: #ffffff;
@@ -89,56 +115,30 @@ span{
     color: #ffffff;
 }
 
-#prayerbutton {
-    height: 200px;
-    width: 500px;
-    background-color: transparent;
-    border: none;
-    transform: translate(60%, 395%);
-    top: 100px;
-    left: 50px;
-    cursor: none;
-    position:absolute; top:0; right:0;
-    z-index:2
-  }
+.prayertextdiv {
+  font-size: 32px;
+  color: transparent;
+  transform: translate(-1.5%, 2260%);
+  font-family: 'reg';
+  position:absolute; top:0; right:0;
+}
 
-  #reloadbutton {
-    height: 150px;
-    width: 150px;
-    background-color: transparent;
-    border: none;
-    transform: translate(430%, 130%);
-    top: 100px;
-    left: 50px;
-    cursor: none;
-    position:absolute; top:0; right:0;
-    z-index:2
-  }
+.prayertext {
+  position:absolute; top:0; right:0;
+}
 
-  .prayertextdiv {
-    font-size: 32px;
-    color: transparent;
-    transform: translate(-1.5%, 2260%);
-    font-family: 'reg';
-    position:absolute; top:0; right:0;
-  }
+.suntextdiv {
+  font-size: 32px;
+  color: transparent;
+  transform: translate(-1.5%, 2260%);
+  font-family: 'reg';
+  position:absolute; top:0; right:0;
+}
 
-  .prayertext {
-    position:absolute; top:0; right:0;
-  }
+.suntext {
+  position:absolute; top:0; right:0;
+}
 
-  .suntextdiv {
-    font-size: 32px;
-    color: transparent;
-    transform: translate(-1.5%, 2260%);
-    font-family: 'reg';
-    position:absolute; top:0; right:0;
-  }
-
-  .suntext {
-    position:absolute; top:0; right:0;
-  }
-
-  .white {
-    color: #ffffff;
-  }
+.white {
+  color: #ffffff;
+}
