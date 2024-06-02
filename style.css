@@ -118,7 +118,7 @@ span{
 .prayertextdiv {
   font-size: 32px;
   color: transparent;
-  transform: translate(-1.5%, -50%);
+  transform: translate(-1.5%, -40%);
   font-family: 'reg';
   position:absolute; top:0; right:0;
 }
@@ -130,7 +130,7 @@ span{
 .suntextdiv {
   font-size: 32px;
   color: transparent;
-  transform: translate(-1.5%, -50%);
+  transform: translate(-1.5%, -40%);
   font-family: 'reg';
   position:absolute; top:0; right:0;
 }
