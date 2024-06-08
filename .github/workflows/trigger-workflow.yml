@@ -1,4 +1,4 @@
-name: Trigger workflow in Repo B
+name: Trigger workflow in crucial
 
 on:
   push:
