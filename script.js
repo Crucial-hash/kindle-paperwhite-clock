@@ -274,7 +274,7 @@ function minuteChanged() {
 
   //SINGAPORE TO UNITED STATES
 
-  if (tracktime >= '09221430') { setProperties("./image/cota.png","37.5%","-16%","690%","205%","./image/usaflag.png","62%","185%","18 - 20 Oct","P1 Q SS S R","United States") }
+  if (tracktime >= '09221430') { setProperties("./image/cota.png","37.5%","-16%","690%","205%","./image/usaflag.png","62%","185%","18 - 20 Oct","P1 SQ S Q R","United States") }
 
   //UNITED STATES TO MEXICO
 
@@ -282,7 +282,7 @@ function minuteChanged() {
 
   //MEXICO TO BRAZIL
 
-  if (tracktime >= '10272130') { setProperties("./image/brazil.png","35.8%","-24%","600%","140%","./image/brazilflag.png","61%","145%","01 - 03 Nov","P1 Q SS S R","Brazil") }
+  if (tracktime >= '10272130') { setProperties("./image/brazil.png","35.8%","-24%","600%","140%","./image/brazilflag.png","61%","145%","01 - 03 Nov","P1 SQ S Q R","Brazil") }
 
   //BRAZIL TO LAS VEGAS
 
@@ -290,15 +290,15 @@ function minuteChanged() {
 
   //LAS VEGAS TO QATAR
 
-  if (tracktime >= '11240730') { setProperties("./image/qatar.png","39%","-24%","635%","140%","./image/qatarflag.png","55%","145%","29 - 01 Nov/Dec","P1 Q SS S R","Qatar") }
+  if (tracktime >= '11230730') { setProperties("./image/qatar.png","39%","-24%","635%","140%","./image/qatarflag.png","55%","145%","29 - 01 Nov/Dec","P1 SQ S Q R","Qatar") }
 
   //QATAR TO ABU DHABI
 
-  if (tracktime >= '12011830') { setProperties("./image/abudhabi.png","37.5%","-24%","670%","140%","./image/abudhabiflag.png","62%","145%","06 - 08 Dec","P1 P2 P3 Q R","Abu Dhabi") }
+  if (tracktime >= '12011730') { setProperties("./image/abudhabi.png","37.5%","-24%","670%","140%","./image/abudhabiflag.png","62%","145%","06 - 08 Dec","P1 P2 P3 Q R","Abu Dhabi") }
 
   //ABU DHABI TO AUSTRALIA (NEXT YEAR)
 
-  if (tracktime >= '12081430') { setProperties("./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%"," ","P1 P2 P3 Q R","Australia") }
+  if (tracktime >= '12081430') { setProperties("./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%","14 - 16 March","P1 P2 P3 Q R","Australia") }
 
   function boldString(str, find){
     var re = new RegExp(find, 'g');
