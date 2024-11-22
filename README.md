@@ -3,14 +3,13 @@
   <img width="250" src="/images/logo.png" alt="Kindle Paperwhite Logo"></a>
 <h1 align="center">Kindle Paperwhite Clock</h1>
 
-<h1 align="center">🕔 A website optimised for the Kindle Paperwhite 2, made to display the time, and the next F1 Grand Prix.</h1>
 
 - The main part of this project is the [Clock Design](/images/pixel-lockscreen-clock.png) which is inspired by Google's [Material You](https://material.io/blog/announcing-material-you) Design. The lock screen is where this clock's design is from, being called the "double line" clock.
 
 
 
 
-## 🔑 Prerequisites
+## Prerequisites
 
 - Kindle Paperwhite 2 (PW2) (You may be able to use other Kindle's but the website will not be optimised).
 - [Jailbroken Kindle](https://www.mobileread.com/forums/showthread.php?t=346037) with [Alpine Linux](https://github.com/thomaspreece/alpine_kindle/) installed. (This is a modified version with Midori browser instead of Chromium which works better on the PW2 but for other Kindle's it should work.).
@@ -19,19 +18,19 @@
 
 
 
-## 📄 Instructions
+## Instructions
 
 - This will be brief but should somewhat guide you to replicating this on your own.
 
 
-### 🖥️ Server
+### Server
 
 - Clone the repository and place the folder where you need it.
 - Open command prompt in the folder and type this command ``` http-server -c-1 ```.
 - Run the python file in the background.
 
 
-### 📖 Kindle Paperwhite
+### Kindle Paperwhite
 
 - Before booting into Alpine Linux, in the search bar type ∼ds, this will disable the screensaver, therefore, stopping the screen from turning off.
 - This is optional but I prefer the backlight off, you can do this by placing a magnet on the back off the kindle to trick it into thinking the cover is closed.
@@ -42,13 +41,5 @@
 
 
 
-## 🖼️ Images
+## Images
 <img src="/images/with-prayer.jpg" width="50%"><img src="/images/without-prayer.jpg" width="50%">
-
-
-
-
-## 💡 Other Information
-
-- Contributing to this project will be greatly appreciated.
-- Thank you for reading about this project!
