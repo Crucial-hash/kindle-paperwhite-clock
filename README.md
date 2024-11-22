@@ -39,5 +39,5 @@
 
 
 
-## Images
+## Preview
 <img src="/images/kindle.jpg">
