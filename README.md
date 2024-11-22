@@ -40,4 +40,4 @@
 
 
 ## Images
-<img src="/images/with-prayer.jpg" width="50%"><img src="/images/without-prayer.jpg" width="50%">
+<img src="/images/kindle.jpg">
