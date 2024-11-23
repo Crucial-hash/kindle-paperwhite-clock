@@ -290,7 +290,7 @@ function minuteChanged() {
 
   //LAS VEGAS TO QATAR
 
-  if (tracktime >= '11230730') { setProperties("./image/qatar.png","39%","-24%","635%","140%","./image/qatarflag.png","55%","145%","29 - 01 Nov/Dec","P1 SQ S Q R","Qatar") }
+  if (tracktime >= '11240730') { setProperties("./image/qatar.png","39%","-24%","635%","140%","./image/qatarflag.png","55%","145%","29 - 01 Nov/Dec","P1 SQ S Q R","Qatar") }
 
   //QATAR TO ABU DHABI
 
