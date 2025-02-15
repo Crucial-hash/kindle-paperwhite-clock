@@ -200,105 +200,174 @@ function minuteChanged() {
       document.body.style.backgroundColor = '#000000';
     }
 
-  //BAHRAIN
+  const currentYear = new Date().getFullYear();
+  const currentDateTime = parseInt(currentYear.toString() + tracktime);
 
-  if (tracktime < '03021630') { setProperties("./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","54.1%","145%","29 - 02 Feb/March","P1 P2 P3 Q R","Bahrain") }
+  const raceSchedule = [
+    {
+      name: "Bahrain Pre-Season Testing",
+      startTime: 202412081430,
+      endTime: 202502281730,
+      properties: ["./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","62.2%","145%","26 - 28 Feb","    D1 D2 D3","Bahrain"]
+    },
+    {
+      name: "Australia",
+      startTime: 202502281730,
+      endTime: 202503160530,
+      properties: ["./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%","14 - 16 March","P1 P2 P3 Q R","Australia"]
+    },
+    {
+      name: "China",
+      startTime: 202503160530,
+      endTime: 202503230830,
+      properties: ["./image/china.png","39.5%","-20%","610%","175%","./image/chinaflag.png","61.5%","170%","21 - 23 March","P1 SQ S Q R","China"]
+    },
+    {
+      name: "Japan",
+      startTime: 202503230830,
+      endTime: 202504060730,
+      properties: ["./image/japan.png","39%","-24%","620%","140%","./image/japanflag.png","62%","145%","04 - 06 April","P1 P2 P3 Q R","Japan"]
+    },
+    {
+      name: "Bahrain",
+      startTime: 202504060730,
+      endTime: 202504131730,
+      properties: ["./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","62.5%","145%","11 - 13 April","P1 P2 P3 Q R","Bahrain"]
+    },
+    {
+      name: "Saudi Arabia",
+      startTime: 202504131730,
+      endTime: 202504201930,
+      properties: ["./image/saudi.png","39%","-24%","690%","140%","./image/saudiflag.png","61%","145%","18 - 20 April","P1 P2 P3 Q R","Saudi Arabia"]
+    },
+    {
+      name: "Miami",
+      startTime: 202504201930,
+      endTime: 202505042230,
+      properties: ["./image/miami.png","38.5%","-24%","625%","140%","./image/usaflag.png","62.8%","145%","02 - 04 May","P1 SQ S Q R","Miami"]
+    },
+    {
+      name: "Imola",
+      startTime: 202505042230,
+      endTime: 202505181530,
+      properties: ["./image/imola.png","37.5%","-24%","615%","140%","./image/italyflag.png","63%","145%","16 - 18 May","P1 P2 P3 Q R","Imola"]
+    },
+    {
+      name: "Monaco",
+      startTime: 202505181530,
+      endTime: 202505251530,
+      properties: ["./image/monaco.png","37.5%","-24%","630%","140%","./image/monacoflag.png","61.8%","145%","23 - 25 May","P1 P2 P3 Q R","Monaco"]
+    },
+    {
+      name: "Spain",
+      startTime: 202505251530,
+      endTime: 202506011530,
+      properties: ["./image/spain.png","39.3%","-32%","623%","80%","./image/spainflag.png","58%","115%","30 - 01 May/June","P1 P2 P3 Q R","Spain"]
+    },
+    {
+      name: "Canada",
+      startTime: 202506011530,
+      endTime: 202506152030,
+      properties: ["./image/canada.png","37.5%","-24%","630%","140%","./image/canadaflag.png","61.45%","145%","13 - 15 June","P1 P2 P3 Q R","Canada"]
+    },
+    {
+      name: "Austria",
+      startTime: 202506152030,
+      endTime: 202506291530,
+      properties: ["./image/rotated-austria.png","37.5%","-20%","620%","160%","./image/austriaflag.png","62.5%","165%","27 - 29 June","P1 P2 P3 Q R","Austria"]
+    },
+    {
+      name: "Britain",
+      startTime: 202506291530,
+      endTime: 202507061630,
+      properties: ["./image/britain.png","36%","-15.5%","606%","205%","./image/britainflag.png","60.5%","225%","04 - 06 July","P1 P2 P3 Q R","Britain"]
+    },
+    {
+      name: "Belgium",
+      startTime: 202507061630,
+      endTime: 202507271530,
+      properties: ["./image/belgium.png","37.5%","-18%","630%","185%","./image/belgiumflag.png","61.9%","190%","25 - 27 July","P1 SQ S Q R","Belgium"]
+    },
+    {
+      name: "Hungary",
+      startTime: 202507271530,
+      endTime: 202508031530,
+      properties: ["./image/hungary.png","37.8%","-21%","640%","162%","./image/hungaryflag.png","63%","160%","01 - 03 Aug","P1 P2 P3 Q R","Hungary"]
+    },
+    {
+      name: "Netherlands",
+      startTime: 202508031530,
+      endTime: 202508311530,
+      properties: ["./image/netherlands.png","37%","-15%","670%","205%","./image/netherlandsflag.png","63%","195%","29 - 31 Aug","P1 P2 P3 Q R","Netherlands"]
+    },
+    {
+      name: "Italy",
+      startTime: 202508311530,
+      endTime: 202509071530,
+      properties: ["./image/monza.png","39.5%","-23.9%","607%","140%","./image/italyflag.png","63.7%","145%","05 - 07 Sep","P1 P2 P3 Q R","Italy"]
+    },
+    {
+      name: "Azerbaijan",
+      startTime: 202509071530,
+      endTime: 202509211330,
+      properties: ["./image/azerbaijan.png","38.8%","-20%","675%","168%","./image/azerbaijanflag.png","66%","173%","19 - 21 Sep","P1 P2 P3 Q R","Azerbaijan"]
+    },
+    {
+      name: "Singapore",
+      startTime: 202509211330,
+      endTime: 202510051440,
+      properties: ["./image/singapore.png","37.3%","-21%","666%","164%","./image/singaporeflag.png","63%","160%","03 - 05 Oct","P1 P2 P3 Q R","Singapore"]
+    },
+    {
+      name: "United States",
+      startTime: 202510051440,
+      endTime: 202510192130,
+      properties: ["./image/cota.png","37.5%","-16%","690%","205%","./image/usaflag.png","62%","185%","19 - 19 Oct","P1 SQ S Q R","United States"]
+    },
+    {
+      name: "Mexico",
+      startTime: 202510192130,
+      endTime: 202510262130,
+      properties: ["./image/mexico.png","38.1%","-24%","633%","140%","./image/mexicoflag.png","63.5%","145%","24 - 26 Oct","P1 P2 P3 Q R","Mexico"]
+    },
+    {
+      name: "Brazil",
+      startTime: 202510262130,
+      endTime: 202511091830,
+      properties: ["./image/brazil.png","38%","-21%","608%","155%","./image/brazilflag.png","62.5%","155%","07 - 09 Nov","P1 SQ S Q R","Brazil"]
+    },
+    {
+      name: "Las Vegas",
+      startTime: 202511091830,
+      endTime: 202511230530,
+      properties: ["./image/lasvegas.png","37.5%","-22%","660%","154%","./image/usaflag.png","63.6%","160%","21 - 23 Nov","P1 P2 P3 Q R","Las Vegas"]
+    },
+    {
+      name: "Qatar",
+      startTime: 202511230530,
+      endTime: 202511301730,
+      properties: ["./image/qatar.png","38%","-22%","615%","158%","./image/qatarflag.png","62.7%","160%","28 - 30 Nov","P1 SQ S Q R","Qatar"]
+    },
+    {
+      name: "Abu Dhabi",
+      startTime: 202511301730,
+      endTime: 202512071440,
+      properties: ["./image/abudhabi.png","35.8%","-24%","650%","140%","./image/abudhabiflag.png","60.4%","145%","05 - 07 Dec","P1 P2 P3 Q R","Abu Dhabi"]
+    },
+    {
+      name: "Next Year's Pre-Season Testing",
+      startTime: 202512071440,
+      endTime: 202599999999,
+      properties: ["./image/bahrain.png","37.5%","-22%","630%","150%","./image/bahrainflag.png","71%","155%","TBA","    D1 D2 D3","Bahrain"]
+    }
+  ];
 
-  //BAHRAIN TO SAUDI
-
-  if (tracktime >= '03021630') { setProperties("./image/saudi.png","38%","-24%","692%","140%","./image/saudiflag.png","60.5%","145%","07 - 09 March","P1 P2 P3 Q R","Saudi Arabia") }
-
-  //SAUDI TO AUSTRALIA
-
-  if (tracktime >= '03091830') { setProperties("./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%","22 - 24 March","P1 P2 P3 Q R","Australia") }
-
-  //AUSTRALIA TO JAPAN
-
-  if (tracktime >= '03240530') { setProperties("./image/japan.png","39%","-24%","620%","140%","./image/japanflag.png","62.5%","145%","05 - 07 April","P1 P2 P3 Q R","Japan") }
-
-  //JAPAN TO CHINA
-
-  if (tracktime >= '04070730') { setProperties("./image/china.png","37.5%","-20%","620%","175%","./image/chinaflag.png","63.5%","170%","19 - 21 April","P1 Q SS S R","China") }
-
-  //CHINA TO MIAMI
-
-  if (tracktime >= '04210930') { setProperties("./image/miami.png","37.5%","-24%","630%","140%","./image/usaflag.png","62.3%","145%","03 - 05 May","P1 Q SS S R","Miami") }
-
-  //MIAMI TO IMOLA
-
-  if (tracktime >= '05052230') { setProperties("./image/imola.png","37.5%","-24%","615%","140%","./image/italyflag.png","63%","145%","17 - 19 May","P1 P2 P3 Q R","Imola") }
-
-  //IMOLA TO MONACO
-
-  if (tracktime >= '05191530') { setProperties("./image/monaco.png","37.5%","-24%","630%","140%","./image/monacoflag.png","62.6%","145%","24 - 26 May","P1 P2 P3 Q R","Monaco") }
-
-  //MONACO TO CANADA
-
-  if (tracktime >= '05261530') { setProperties("./image/canada.png","37.5%","-24%","630%","140%","./image/canadaflag.png","61%","145%","07 - 09 June","P1 P2 P3 Q R","Canada") }
-
-  //CANADA TO SPAIN
-
-  if (tracktime >= '06092030') { setProperties("./image/spain.png","37.5%","-32%","630%","80%","./image/spainflag.png","63.4%","120%","21 - 23 June","P1 P2 P3 Q R","Spain") }
-
-  //SPAIN TO AUSTRIA
-
-  if (tracktime >= '06231530') { setProperties("./image/austria.png","43%","-20%","670%","160%","./image/austriaflag.png","67%","165%","28 - 30 June","P1 Q SS S R","Austria") }
-
-  //AUSTRIA TO BRITAIN
-
-  if (tracktime >= '06301530') { setProperties("./image/britain.png","39%","-15%","630%","200%","./image/britainflag.png","63.7%","220%","05 - 07 July","P1 P2 P3 Q R","Britain") }
-
-  //BRITAIN TO HUNGARY
-
-  if (tracktime >= '07071630') { setProperties("./image/hungary.png","40%","-21%","660%","159%","./image/hungaryflag.png","66%","155%","19 - 21 July","P1 P2 P3 Q R","Hungary") }
-
-  //HUNGARY TO BELGIUM
-
-  if (tracktime >= '07211530') { setProperties("./image/belgium.png","37.5%","-24%","630%","140%","./image/belgiumflag.png","62.7%","145%","26 - 28 July","P1 P2 P3 Q R","Belgium") }
-
-  //BELGIUM TO NETHERLANDS
-
-  if (tracktime >= '07281530') { setProperties("./image/netherlands.png","41%","-17%","700%","195%","./image/netherlandsflag.png","64.7%","185%","23 - 25 Aug","P1 P2 P3 Q R","Netherlands") }
-
-  //NETHERLANDS TO MONZA
-
-  if (tracktime >= '08251530') { setProperties("./image/monza.png","41%","-24%","620%","140%","./image/italyflag.png","59.9%","145%","30 - 01 Aug/Sep","P1 P2 P3 Q R","Italy") }
-
-  //MONZA TO AZERBAIJAN
-
-  if (tracktime >= '09011530') { setProperties("./image/azerbaijan.png","38.5%","-20%","680%","161%","./image/azerbaijanflag.png","64%","173%","13 - 15 Sep","P1 P2 P3 Q R","Azerbaijan") }
-
-  //AZERBAIJAN TO SINGAPORE
-
-  if (tracktime >= '09151330') { setProperties("./image/singapore.png","37.3%","-24%","666%","140%","./image/singaporeflag.png","63%","145%","20 - 22 Sep","P1 P2 P3 Q R","Singapore") }
-
-  //SINGAPORE TO UNITED STATES
-
-  if (tracktime >= '09221430') { setProperties("./image/cota.png","37.5%","-16%","690%","205%","./image/usaflag.png","62%","185%","18 - 20 Oct","P1 SQ S Q R","United States") }
-
-  //UNITED STATES TO MEXICO
-
-  if (tracktime >= '10202130') { setProperties("./image/mexico.png","38.1%","-24%","633%","140%","./image/mexicoflag.png","63.5%","145%","25 - 27 Oct","P1 P2 P3 Q R","Mexico") }
-
-  //MEXICO TO BRAZIL
-
-  if (tracktime >= '10272130') { setProperties("./image/brazil.png","35.8%","-24%","600%","140%","./image/brazilflag.png","61%","145%","01 - 03 Nov","P1 SQ S Q R","Brazil") }
-
-  //BRAZIL TO LAS VEGAS
-
-  if (tracktime >= '11031830') { setProperties("./image/lasvegas.png","37.5%","-22%","660%","154%","./image/usaflag.png","63.6%","160%","22 - 23 Nov","P1 P2 P3 Q R","Las Vegas") }
-
-  //LAS VEGAS TO QATAR
-
-  if (tracktime >= '11240730') { setProperties("./image/qatar.png","39%","-24%","635%","140%","./image/qatarflag.png","55%","145%","29 - 01 Nov/Dec","P1 SQ S Q R","Qatar") }
-
-  //QATAR TO ABU DHABI
-
-  if (tracktime >= '12011730') { setProperties("./image/abudhabi.png","37.5%","-24%","670%","140%","./image/abudhabiflag.png","62%","145%","06 - 08 Dec","P1 P2 P3 Q R","Abu Dhabi") }
-
-  //ABU DHABI TO AUSTRALIA (NEXT YEAR)
-
-  if (tracktime >= '12081430') { setProperties("./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%","14 - 16 March","P1 P2 P3 Q R","Australia") }
+  for (const event of raceSchedule) {
+    if (currentDateTime >= event.startTime && currentDateTime < event.endTime) {
+      setProperties(...event.properties);
+      break;
+    }
+  }
 
   function boldString(str, find){
     var re = new RegExp(find, 'g');
