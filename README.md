@@ -10,7 +10,7 @@
 ## Prerequisites
 
 - Kindle Paperwhite 2 (PW2) (You may be able to use other Kindle's but the website will not be optimised).
-- [Jailbroken Kindle](https://www.mobileread.com/forums/showthread.php?t=346037) with [Alpine Linux](https://github.com/thomaspreece/alpine_kindle/) installed. (This is a modified version with Midori browser instead of Chromium which works better on the PW2 but for other Kindle's it should work.).
+- [Jailbroken Kindle](https://kindlemodding.org/) with [Alpine Linux](https://github.com/thomaspreece/alpine_kindle/) installed. (This is a modified version with Midori browser instead of Chromium which works better on the PW2 but for other Kindle's it should work.).
 - (Recommended) Always-on Computer (Server), (Make sure to download [Python](https://www.python.org/) and download the libraries [BeautifulSoup](https://pypi.org/project/beautifulsoup4/), [lxml](https://pypi.org/project/lxml/), and [requests](https://pypi.org/project/requests/) if you want to use the prayer function. You will also need [Node.js](https://nodejs.org/en) with the [http-server](https://www.npmjs.com/package/http-server) library to host the server.
 
 
