@@ -2,7 +2,7 @@
 <h1 align="center">Kindle Paperwhite Clock</h1>
 
 
-- The main part of this project is the [Clock Design](/images/pixel-lockscreen-clock.png) which is inspired by Google's [Material You](https://material.io/blog/announcing-material-you) Design. The lock screen is where this clock's design is from, being called the "double line" clock.
+- The main part of this project is the [Clock Design](https://raw.githubusercontent.com/Crucial-hash/kindle-paperwhite-clock/refs/heads/main/images/pixel-lockscreen-clock.png) which is inspired by Google's [Material You](https://material.io/blog/announcing-material-you) Design. The lock screen is where this clock's design is from, being called the "double line" clock.
 
 
 
