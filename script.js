@@ -357,7 +357,7 @@ function minuteChanged() {
     {
       name: "Next Year's Pre-Season Testing",
       startTime: 202512071440,
-      endTime: 202599999999,
+      endTime: 202699999999,
       properties: ["./image/bahrain.png","37.5%","-22%","630%","150%","./image/bahrainflag.png","71%","155%","TBA","    D1 D2 D3","Bahrain"]
     }
   ];
