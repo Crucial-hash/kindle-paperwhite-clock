@@ -206,158 +206,164 @@ function minuteChanged() {
   const raceSchedule = [
     {
       name: "Bahrain Pre-Season Testing",
-      startTime: 202412081430,
-      endTime: 202502281730,
-      properties: ["./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","62.2%","145%","26 - 28 Feb","    D1 D2 D3","Bahrain"]
+      startTime: 202512071440, // Previous year's testing end time
+      endTime: 202602132359, // Testing end time unknown so have set to 23:59
+      properties: ["./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","62.2%","145%","11 - 13 Feb","    D1 D2 D3","Bahrain"]
+    },
+    {
+      name: "Bahrain Pre-Season Testing",
+      startTime: 202602132359, // There are two testing sessions before the season starts
+      endTime: 202602202359, // Testing end time unknown so have set to 23:59
+      properties: ["./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","62.2%","145%","18 - 20 Feb","    D1 D2 D3","Bahrain"]
     },
     {
       name: "Australia",
-      startTime: 202502281730,
-      endTime: 202503160530,
-      properties: ["./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","60%","145%","14 - 16 March","P1 P2 P3 Q R","Australia"]
+      startTime: 202602202359,
+      endTime: 202603080530,
+      properties: ["./image/australia.png","37.5%","-24%","640%","140%","./image/australiaflag.png","59%","145%","06 - 08 March","P1 P2 P3 Q R","Australia"]
     },
     {
       name: "China",
-      startTime: 202503160530,
-      endTime: 202503230830,
-      properties: ["./image/china.png","39.5%","-20%","610%","175%","./image/chinaflag.png","61.5%","170%","21 - 23 March","P1 SQ S Q R","China"]
+      startTime: 202603080530,
+      endTime: 202603150830,
+      properties: ["./image/china.png","39.5%","-20%","610%","175%","./image/chinaflag.png","61.5%","170%","13 - 15 March","P1 SQ S Q R","China"]
     },
     {
       name: "Japan",
-      startTime: 202503230830,
-      endTime: 202504060730,
-      properties: ["./image/japan.png","39%","-24%","620%","140%","./image/japanflag.png","62%","145%","04 - 06 April","P1 P2 P3 Q R","Japan"]
+      startTime: 202603150830,
+      endTime: 202603290730,
+      properties: ["./image/japan.png","39%","-24%","620%","140%","./image/japanflag.png","61.3%","145%","27 - 29 March","P1 P2 P3 Q R","Japan"]
     },
     {
       name: "Bahrain",
-      startTime: 202504060730,
-      endTime: 202504131730,
-      properties: ["./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","62.5%","145%","11 - 13 April","P1 P2 P3 Q R","Bahrain"]
+      startTime: 202603290730,
+      endTime: 202604121730,
+      properties: ["./image/bahrain.png","37.5%","-24%","630%","140%","./image/bahrainflag.png","62%","145%","10 - 12 April","P1 P2 P3 Q R","Bahrain"]
     },
     {
       name: "Saudi Arabia",
-      startTime: 202504131730,
-      endTime: 202504201930,
-      properties: ["./image/saudi.png","39%","-24%","690%","140%","./image/saudiflag.png","61%","145%","18 - 20 April","P1 P2 P3 Q R","Saudi Arabia"]
+      startTime: 202604121730,
+      endTime: 202604191930,
+      properties: ["./image/saudi.png","39%","-24%","690%","140%","./image/saudiflag.png","62.5%","145%","17 - 19 April","P1 P2 P3 Q R","Saudi Arabia"]
     },
     {
       name: "Miami",
-      startTime: 202504201930,
-      endTime: 202505042230,
-      properties: ["./image/miami.png","38.5%","-24%","625%","140%","./image/usaflag.png","62.8%","145%","02 - 04 May","P1 SQ S Q R","Miami"]
-    },
-    {
-      name: "Imola",
-      startTime: 202505042230,
-      endTime: 202505181530,
-      properties: ["./image/imola.png","37.5%","-24%","615%","140%","./image/italyflag.png","63%","145%","16 - 18 May","P1 P2 P3 Q R","Imola"]
-    },
-    {
-      name: "Monaco",
-      startTime: 202505181530,
-      endTime: 202505251530,
-      properties: ["./image/monaco.png","37.5%","-24%","630%","140%","./image/monacoflag.png","61.8%","145%","23 - 25 May","P1 P2 P3 Q R","Monaco"]
-    },
-    {
-      name: "Spain",
-      startTime: 202505251530,
-      endTime: 202506011530,
-      properties: ["./image/spain.png","39.3%","-32%","623%","80%","./image/spainflag.png","58%","115%","30 - 01 May/June","P1 P2 P3 Q R","Spain"]
+      startTime: 202604191930,
+      endTime: 202605032230,
+      properties: ["./image/miami.png","38.5%","-24%","625%","140%","./image/usaflag.png","63%","145%","01 - 03 May","P1 SQ S Q R","Miami"]
     },
     {
       name: "Canada",
-      startTime: 202506011530,
-      endTime: 202506152030,
-      properties: ["./image/canada.png","37.5%","-24%","630%","140%","./image/canadaflag.png","61.45%","145%","13 - 15 June","P1 P2 P3 Q R","Canada"]
+      startTime: 202605032230,
+      endTime: 202605242230,
+      properties: ["./image/canada.png","37.5%","-24%","630%","140%","./image/canadaflag.png","61.45%","145%","22 - 24 May","P1 SQ S Q R","Canada"] 
+    },
+    {
+      name: "Monaco",
+      startTime: 202605242230,
+      endTime: 202606071530,
+      properties: ["./image/monaco.png","37.5%","-24%","630%","140%","./image/monacoflag.png","61.2%","145%","05 - 07 June","P1 P2 P3 Q R","Monaco"]
+    },
+    {
+      name: "Barcelona",
+      startTime: 202606071530,
+      endTime: 202606141530,
+      properties: ["./image/barcelona.png","41.2%","-32%","665%","80%","./image/spainflag.png","64.5%","115%","12 - 14 June","P1 P2 P3 Q R","Barcelona"]
     },
     {
       name: "Austria",
-      startTime: 202506152030,
-      endTime: 202506291530,
-      properties: ["./image/rotated-austria.png","37.5%","-20%","620%","160%","./image/austriaflag.png","62.5%","165%","27 - 29 June","P1 P2 P3 Q R","Austria"]
+      startTime: 202606141530,
+      endTime: 202606281530,
+      properties: ["./image/rotated-austria.png","37.5%","-20%","620%","160%","./image/austriaflag.png","62.5%","165%","26 - 28 June","P1 P2 P3 Q R","Austria"]
     },
     {
-      name: "Britain",
-      startTime: 202506291530,
-      endTime: 202507061630,
-      properties: ["./image/britain.png","36%","-15.5%","606%","205%","./image/britainflag.png","60.5%","225%","04 - 06 July","P1 P2 P3 Q R","Britain"]
+      name: "Great Britain",
+      startTime: 202606281530,
+      endTime: 202607051630,
+      properties: ["./image/britain.png","36%","-15.5%","672%","205.5%","./image/britainflag.png","62%","225%","03 - 05 July","P1 SQ S Q R","Great Britain"]
     },
     {
       name: "Belgium",
-      startTime: 202507061630,
-      endTime: 202507271530,
-      properties: ["./image/belgium.png","37.5%","-18%","630%","185%","./image/belgiumflag.png","61.9%","190%","25 - 27 July","P1 SQ S Q R","Belgium"]
+      startTime: 202607051630,
+      endTime: 202607191530,
+      properties: ["./image/belgium.png","37.5%","-18%","630%","185%","./image/belgiumflag.png","62.2%","190%","17 - 19 July","P1 P2 P3 Q R","Belgium"]
     },
     {
       name: "Hungary",
-      startTime: 202507271530,
-      endTime: 202508031530,
-      properties: ["./image/hungary.png","37.8%","-21%","640%","162%","./image/hungaryflag.png","63%","160%","01 - 03 Aug","P1 P2 P3 Q R","Hungary"]
+      startTime: 202607191530,
+      endTime: 202607261530,
+      properties: ["./image/hungary.png","37.8%","-21%","640%","162%","./image/hungaryflag.png","63%","160%","24 - 26 July","P1 P2 P3 Q R","Hungary"]
     },
     {
       name: "Netherlands",
-      startTime: 202508031530,
-      endTime: 202508311530,
-      properties: ["./image/netherlands.png","37%","-15%","670%","205%","./image/netherlandsflag.png","63%","195%","29 - 31 Aug","P1 P2 P3 Q R","Netherlands"]
+      startTime: 202607261530,
+      endTime: 202608231530,
+      properties: ["./image/netherlands.png","37%","-15%","670%","205%","./image/netherlandsflag.png","61.5%","195%","21 - 23 Aug","P1 SQ S Q R","Netherlands"]
     },
     {
       name: "Italy",
-      startTime: 202508311530,
-      endTime: 202509071530,
-      properties: ["./image/monza.png","39.5%","-23.9%","607%","140%","./image/italyflag.png","63.7%","145%","05 - 07 Sep","P1 P2 P3 Q R","Italy"]
+      startTime: 202608231530,
+      endTime: 202609061530,
+      properties: ["./image/monza.png","39.5%","-23.9%","607%","140%","./image/italyflag.png","63.7%","145%","04 - 06 Sep","P1 P2 P3 Q R","Italy"]
+    },
+    {
+      name: "Spain",
+      startTime: 202609061530,
+      endTime: 202609131530,
+      properties: ["./image/spain.png","37.3%","-22%","610%","154%","./image/spainflag.png","63.5%","164%","11 - 13 Sep","P1 P2 P3 Q R","Spain"]
     },
     {
       name: "Azerbaijan",
-      startTime: 202509071530,
-      endTime: 202509211330,
-      properties: ["./image/azerbaijan.png","38.8%","-20%","675%","168%","./image/azerbaijanflag.png","66%","173%","19 - 21 Sep","P1 P2 P3 Q R","Azerbaijan"]
+      startTime: 202609131530,
+      endTime: 202609261330,
+      properties: ["./image/azerbaijan.png","38.8%","-20%","675%","168%","./image/azerbaijanflag.png","66%","173%","24 - 26 Sep","P1 P2 P3 Q R","Azerbaijan"]
     },
     {
       name: "Singapore",
-      startTime: 202509211330,
-      endTime: 202510051440,
-      properties: ["./image/singapore.png","37.3%","-21%","666%","164%","./image/singaporeflag.png","63%","160%","03 - 05 Oct","P1 P2 P3 Q R","Singapore"]
+      startTime: 202609261330,
+      endTime: 202610111430,
+      properties: ["./image/singapore.png","37.3%","-21%","666%","164%","./image/singaporeflag.png","63%","160%","09 - 11 Oct","P1 SQ S Q R","Singapore"]
     },
     {
       name: "United States",
-      startTime: 202510051440,
-      endTime: 202510192130,
-      properties: ["./image/cota.png","37.5%","-16%","690%","205%","./image/usaflag.png","62%","185%","19 - 19 Oct","P1 SQ S Q R","United States"]
+      startTime: 202610111430,
+      endTime: 202610252130,
+      properties: ["./image/cota.png","37.5%","-16%","690%","205%","./image/usaflag.png","62.3%","185%","23 - 25 Oct","P1 P2 P3 Q R","United States"]
     },
     {
       name: "Mexico",
-      startTime: 202510192130,
-      endTime: 202510262130,
-      properties: ["./image/mexico.png","38.1%","-24%","633%","140%","./image/mexicoflag.png","63.5%","145%","24 - 26 Oct","P1 P2 P3 Q R","Mexico"]
+      startTime: 202610252130,
+      endTime: 202611012130,
+      properties: ["./image/mexico.png","38.1%","-24%","633%","140%","./image/mexicoflag.png","57.3%","145%","30 - 01 Oct/Nov","P1 P2 P3 Q R","Mexico"]
     },
     {
       name: "Brazil",
-      startTime: 202510262130,
-      endTime: 202511091830,
-      properties: ["./image/brazil.png","38%","-21%","608%","155%","./image/brazilflag.png","62.5%","155%","07 - 09 Nov","P1 SQ S Q R","Brazil"]
+      startTime: 202611012130,
+      endTime: 202611081830,
+      properties: ["./image/brazil.png","38%","-21%","608%","155%","./image/brazilflag.png","62.3%","155%","06 - 08 Nov","P1 P2 P3 Q R","Brazil"]
     },
     {
       name: "Las Vegas",
-      startTime: 202511091830,
-      endTime: 202511230530,
-      properties: ["./image/lasvegas.png","37.5%","-22%","660%","154%","./image/usaflag.png","63.6%","160%","21 - 23 Nov","P1 P2 P3 Q R","Las Vegas"]
+      startTime: 202611081830,
+      endTime: 202611220530,
+      properties: ["./image/lasvegas.png","37.5%","-22%","660%","154%","./image/usaflag.png","63.6%","160%","20 - 22 Nov","P1 P2 P3 Q R","Las Vegas"]
     },
     {
       name: "Qatar",
-      startTime: 202511230530,
-      endTime: 202511301730,
-      properties: ["./image/qatar.png","38%","-22%","615%","158%","./image/qatarflag.png","62.7%","160%","28 - 30 Nov","P1 SQ S Q R","Qatar"]
+      startTime: 202611220530,
+      endTime: 202611291730,
+      properties: ["./image/qatar.png","38%","-22%","615%","158%","./image/qatarflag.png","62.7%","160%","27 - 29 Nov","P1 P2 P3 Q R","Qatar"]
     },
     {
       name: "Abu Dhabi",
-      startTime: 202511301730,
-      endTime: 202512071440,
-      properties: ["./image/abudhabi.png","35.8%","-24%","650%","140%","./image/abudhabiflag.png","60.4%","145%","05 - 07 Dec","P1 P2 P3 Q R","Abu Dhabi"]
+      startTime: 202611291730,
+      endTime: 202612061430,
+      properties: ["./image/abudhabi.png","35.8%","-24%","650%","140%","./image/abudhabiflag.png","60.4%","145%","04 - 06 Dec","P1 P2 P3 Q R","Abu Dhabi"]
     },
     {
       name: "Next Year's Pre-Season Testing",
-      startTime: 202512071440,
-      endTime: 202699999999,
+      startTime: 202612061430,
+      endTime: 202799999999,
       properties: ["./image/bahrain.png","37.5%","-22%","630%","150%","./image/bahrainflag.png","71%","155%","TBA","    D1 D2 D3","Bahrain"]
     }
   ];
